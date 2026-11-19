@@ -1,0 +1,10 @@
+# CPU reference path (Python 3.11+)
+numpy>=1.26,<3
+scipy>=1.12,<2
+soundfile>=0.12,<1
+pyloudnorm>=0.1,<1
+norbert>=0.2,<1
+pytest>=8,<10
+librosa>=0.10,<1
+# Optional differentiable / GPU backend; install matching torch + torchaudio builds.
+# pip install torch torchaudio dasp-pytorch

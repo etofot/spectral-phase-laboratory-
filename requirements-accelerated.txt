@@ -1,0 +1,5 @@
+# Install the mutually compatible torch + torchaudio wheels for your CUDA driver.
+-r requirements.txt
+torch>=2.4
+torchaudio>=2.4
+dasp-pytorch>=0.0.1

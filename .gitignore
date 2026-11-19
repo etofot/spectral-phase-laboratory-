@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.lab-data/
+.qa/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.venv/
+.env
+.pydeps/

@@ -1,0 +1,164 @@
+{
+  "sample_rate": 48000,
+  "duration_s": 5,
+  "device": "cpu",
+  "before": {
+    "score": 61.5,
+    "meter": {
+      "lufs": -15.75,
+      "truePeak": -3.19,
+      "rms": -17.71,
+      "crest": 14.51,
+      "lra": null,
+      "lraNote": "Для устойчивой оценки LRA требуется более длинная программа.",
+      "shortMax": -15.65
+    },
+    "correlation": 0.937
+  },
+  "after": {
+    "score": 100.0,
+    "meter": {
+      "lufs": -16.93,
+      "truePeak": -1.22,
+      "rms": -17.04,
+      "crest": 15.8,
+      "lra": null,
+      "lraNote": "Для устойчивой оценки LRA требуется более длинная программа.",
+      "shortMax": -16.89
+    },
+    "correlation": 0.975
+  },
+  "conflicts_before": [
+    {
+      "type": "phase",
+      "tracks": [
+        "kick",
+        "sub_synth"
+      ],
+      "hz": 55.0,
+      "endHz": 55.0,
+      "value": -8.01
+    },
+    {
+      "type": "resonance",
+      "tracks": [
+        "bass_guitar"
+      ],
+      "hz": 222.0,
+      "endHz": 222.0,
+      "value": 7.52
+    },
+    {
+      "type": "resonance",
+      "tracks": [
+        "lead_synth"
+      ],
+      "hz": 345,
+      "endHz": 347,
+      "value": 10.27
+    }
+  ],
+  "conflicts_after": [],
+  "steps": [
+    {
+      "iteration": 1,
+      "issue": "phase_kick_sub_synth",
+      "reason": "Потеря энергии 8.0 дБ относительно некогерентной суммы. Разность фаз 164.9°, когерентность 0.78.",
+      "command": {
+        "track": "sub_synth",
+        "phase": -164.9
+      },
+      "headroomTrim": -3.3,
+      "before": 61.5,
+      "after": 79.5,
+      "peakBefore": -3.19,
+      "peakAfter": -1.1,
+      "accepted": true
+    },
+    {
+      "iteration": 2,
+      "issue": "resonance_bass_guitar",
+      "reason": "Контрольная полоса выше целевого отношения к опорному тону 73.4 Гц на 7.5 дБ. Измерение по полному окну, разрешение 0.2 Гц.",
+      "command": {
+        "track": "bass_guitar",
+        "freq": 222.0,
+        "gain": -4.0,
+        "q": 28
+      },
+      "headroomTrim": 0,
+      "before": 79.5,
+      "after": 84.2,
+      "peakBefore": -1.1,
+      "peakAfter": -1.17,
+      "accepted": true
+    },
+    {
+      "iteration": 3,
+      "issue": "resonance_bass_guitar",
+      "reason": "Контрольная полоса выше целевого отношения к опорному тону 73.4 Гц на 3.5 дБ. Измерение по полному окну, разрешение 0.2 Гц.",
+      "command": {
+        "track": "bass_guitar",
+        "freq": 222.0,
+        "gain": -4.0,
+        "q": 28
+      },
+      "headroomTrim": 0,
+      "before": 84.2,
+      "after": 88.2,
+      "peakBefore": -1.17,
+      "peakAfter": -1.22,
+      "accepted": true
+    },
+    {
+      "iteration": 4,
+      "issue": "resonance_lead_synth",
+      "reason": "Контрольная полоса выше целевого отношения к опорному тону 440 Гц на 10.3 дБ. Измерение по полному окну, разрешение 0.2 Гц.",
+      "command": {
+        "track": "lead_synth",
+        "freq": 346,
+        "gain": -4.0,
+        "q": 35
+      },
+      "headroomTrim": 0,
+      "before": 88.2,
+      "after": 92.7,
+      "peakBefore": -1.22,
+      "peakAfter": -1.22,
+      "accepted": true
+    },
+    {
+      "iteration": 5,
+      "issue": "resonance_lead_synth",
+      "reason": "Контрольная полоса выше целевого отношения к опорному тону 440 Гц на 6.4 дБ. Измерение по полному окну, разрешение 0.2 Гц.",
+      "command": {
+        "track": "lead_synth",
+        "freq": 346,
+        "gain": -4.0,
+        "q": 35
+      },
+      "headroomTrim": 0,
+      "before": 92.7,
+      "after": 97.1,
+      "peakBefore": -1.22,
+      "peakAfter": -1.22,
+      "accepted": true
+    },
+    {
+      "iteration": 6,
+      "issue": "resonance_lead_synth",
+      "reason": "Контрольная полоса выше целевого отношения к опорному тону 440 Гц на 2.5 дБ. Измерение по полному окну, разрешение 0.2 Гц.",
+      "command": {
+        "track": "lead_synth",
+        "freq": 346,
+        "gain": -3.52,
+        "q": 35
+      },
+      "headroomTrim": 0,
+      "before": 97.1,
+      "after": 100.0,
+      "peakBefore": -1.22,
+      "peakAfter": -1.22,
+      "accepted": true
+    }
+  ]
+}
